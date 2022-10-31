@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getBagsRequests = async () =>
-  await axios.get("https://bag-server.onrender.com/bag", { headers: {'Content-Type': 'application/octet-stream'}});
+  await axios.get("http://localhost:4000/bag");
 
 
 export const createBagRequest = async (bag) => {
