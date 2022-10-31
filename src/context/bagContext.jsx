@@ -10,6 +10,11 @@ import { useNavigate } from "react-router-dom";
 
 const bagContext = createContext();
 
+export const useApi = () => {
+  const context = useContext(bagContext);
+  return context;
+};
+
 export const useBags = () => {
   const context = useContext(bagContext);
   return context;

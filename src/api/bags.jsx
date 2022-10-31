@@ -1,5 +1,8 @@
 import axios from "axios";
 
+export const getWelcomeRequests = async () =>
+  await axios.get("https://bag-server.onrender.com");
+
 export const getBagsRequests = async () =>
   await axios.get("https://bag-server.onrender.com/bag");
 

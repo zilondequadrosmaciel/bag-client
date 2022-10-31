@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { BagProvider } from "./context/bagContext";
-import { Home, BagForm, NotFound } from "./pages";
+import { Welcome, BagForm, NotFound } from "./pages";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <div className="px-10 container m-auto">
         <BagProvider>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/add" element={<BagForm />} />
             <Route path="/bag/:id" element={<BagForm />} />
             <Route path="*" element={<NotFound />} />
