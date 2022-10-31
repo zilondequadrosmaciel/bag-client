@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getBagsRequests = async () =>
-  await axios.get("http://localhost:4000/bag");
+  await axios.get("https://bag-server.onrender.com/bag");
 
 export const createBagRequest = async (bag) => {
 const form = new FormData();
@@ -10,7 +10,7 @@ for (let key in bag){
   form.append(key, bag[key])
 }
 
-  return await axios.post("http://localhost:4000/bag/", form, {
+  return await axios.post("https://bag-server.onrender.com/bag/", form, {
     headers: {
         "Content-Type": "multipart/form-data",
     } 
@@ -18,10 +18,10 @@ for (let key in bag){
 }
 
 export const removeBagRequest = async (id) =>
-  await axios.delete("http://localhost:4000/bag/" + id);
+  await axios.delete("https://bag-server.onrender.com/bag/" + id);
 
 export const getBagRequest = async (id) =>
-  await axios.get("http://localhost:4000/bag/" + id);
+  await axios.get("https://bag-server.onrender.com/bag/" + id);
 
 export const updateBagRequest = async (id, updateFields) =>
-  await axios.put(`http://localhost:4000/bag/${id}`, updateFields);
+  await axios.put(`https://bag-server.onrender.com/bag/${id}`, updateFields);
