@@ -1,7 +1,11 @@
 import axios from "axios";
 
 export const getBagsRequests = async () =>
-  await axios.get("https://bag-server.onrender.com/bag");
+  await axios.get("https://bag-server.onrender.com/bag", {
+    headers: {
+      "Content-Type": "application/octet-stream",
+  } 
+  });
 
 export const createBagRequest = async (bag) => {
 const form = new FormData();
